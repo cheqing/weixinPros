@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/indexold/indexold",
+    "pages/logs/logs",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#ddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "名片",
+        "iconPath": "/pages/imgs/card-default.png",
+        "selectedIconPath": "/pages/imgs/card-hl.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "消息",
+        "iconPath": "/pages/imgs/message-default.png",
+        "selectedIconPath": "/pages/imgs/message-hl.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "拍照",
+        "iconPath": "/pages/imgs/camera-default.png",
+        "selectedIconPath": "/pages/imgs/camera-hl.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "查找",
+        "iconPath": "/pages/imgs/search-default.png",
+        "selectedIconPath": "/pages/imgs/search-hl.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "查询",
+        "iconPath": "/pages/imgs/search-default.png",
+        "selectedIconPath": "/pages/imgs/search-hl.png"
+      }
+    ]
+  },
+  "debug":false
+}

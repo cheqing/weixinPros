@@ -1,0 +1,12 @@
+<!--index.wxml  -->
+<!--触发action-sheet事件-->
+<button type="primary" bindtap="listenerButton">弹出ActionSheet</button>
+<!--默认action-sheet为隐藏，由button触发-->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
+
+    <block wx:for-items="{{actionSheetItems}}" > 
+        <action-sheet-item >{{item}}</action-sheet-item>
+    </block>
+    <!--自动隐藏action-sheet-->
+    <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

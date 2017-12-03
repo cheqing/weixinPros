@@ -1,0 +1,134 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <!-- <swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{swiperImgUrls}}">
+      <swiper-item>
+        <image src='{{item}}' width="100%" height="100%"></image>
+      </swiper-item>
+    </block>
+  </swiper> -->
+
+  <!-- <view class='group'>
+    <block wx:for="{{iconSize}}">
+      <icon type="success" size="{{item}}"></icon>
+    </block>  
+  </view>
+
+  <view class='group'>
+    <block wx:for="{{iconType}}">
+      <icon type="{{item}}" size="30"></icon>
+    </block>
+  </view>
+  /
+  <view class='group'>
+    <block wx:for="{{iconColor}}">
+      <icon type="success" size="30" color="{{item}}"></icon>
+    </block>
+  </view> -->
+
+  <!-- <view style='width:500rpx'>
+    <progress percent='80' show-info color='#09BB07' active stroke-width="15"></progress>
+  </view> -->
+
+  <!-- <view>
+    <checkbox-group bindchange="changeCheckbox" style="height: 300px;flex-direction:column;">
+      <label wx:for="{{checkInfo}}">
+        <checkbox value='{{ item.name }}' checked='{{item.checked}}'>{{ item.value }}</checkbox>
+      </label>
+    </checkbox-group>
+  </view> -->
+  
+   <!-- <view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='section section_gap'>
+        <view class='group'>Switch: <switch name="switch"></switch></view>
+        <view class='group'>slider: <slider name="slider" show-value></slider></view>
+        <view class='group'>input: <input name="input" placeholder='please input here'/></view>
+        <view class='group'>
+          radio: 
+          <radio-group name="radioGroup">
+            <label><radio value='radio1'>radio1</radio></label>
+            <label><radio value='radio2'>radio2</radio></label>
+          </radio-group>
+        </view>
+        <view class='group'>
+          checkbox: 
+          <label>
+            <checkbox-group name="checkboxgroup">
+              <label><checkbox value='checkbox1'>checkbox1</checkbox></label>
+              <label><checkbox value='checkbox2'>checkbox2</checkbox></label>
+            </checkbox-group>
+          </label>
+        </view>
+        <view class='group'>
+          <button form-type="submit">submit</button>
+          <button form-type='reset'>reset</button>
+        </view>
+      </view>
+    </form>
+  </view>  -->
+
+  <!-- <view>
+    <input placeholder='这是一个可以自动聚焦的input' auto-focus></input>
+    <input type='number' placeholder='number'></input>
+    <input type='digit' placeholder='digit'></input>
+    <input type='idcard' placeholder='idcard'></input>
+  </view> -->
+
+  <!-- <view>
+    <text>普通选择器：</text>
+    <picker range='{{ array }}' value='{{ index }}' bindchange="bindChange">
+      <input placeholder='请选择国家' value='{{ array[index] }}' style='background-color:#F3F3F3;'/>
+    </picker>
+  </view>
+
+  <view>
+    <text>多列选择器：</text>
+    <picker mode='multiSelector' range='{{ multiArray }}'  bindchange="bindChangeMulti" bindcolumnchange='bindcolumnchangeMulti'>
+      <input placeholder='请选择动物' value='{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}' style='background-color:#F3F3F3;'/>
+    </picker>
+  </view>
+
+  <view>
+    <text>时间选择器：</text>
+    <picker mode='time'  value='{{ time }}' start="07:01" end="12:00">
+      <input placeholder='请选择时间' value='{{ time }}' style='background-color:#F3F3F3;'/>
+    </picker>
+  </view>
+
+  <view>
+    <text>日期选择器：</text>
+    <picker mode='date'  value='{{ date }}' start="1991-04-07" end="2020-05-20">
+      <input placeholder='请选择日期' value='{{ date }}' style='background-color:#F3F3F3;'/>
+    </picker>
+  </view> -->
+
+  <!-- <view class='btn-area'>
+    <navigator url='/pages/logs/logs?name=tom' hover-class='navigator-hover'>跳转到日志</navigator>
+  </view> -->
+  <view>
+    <button bindtap='requestClick'>发送请求</button>
+  </view>
+
+  <view>
+    <block wx:for="{{headUrl}}">
+      <image src='{{item}}' style='border-radius:50%;width:200rpx;height:200rpx;' mode='widthFix'></image>
+    </block>
+  </view>
+  
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  
+  <view style='margin-top:50rpx;'></view>
+
+</view>
