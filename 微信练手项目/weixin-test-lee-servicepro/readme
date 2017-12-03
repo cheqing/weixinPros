@@ -1,5 +1,12 @@
 项目技术架构：SpringBoot+Druid+Mybatis
 本项目主要为了配合weixin-test-lee微信项目提供后台业务服务而做，
+小程序相关资料博文：
+侧边栏+顶部选项卡：
+	http://blog.csdn.net/qq_31383345/article/details/53453182
+	http://blog.csdn.net/qq_31383345/article/details/52900835
+小程序项目实例：
+	http://blog.csdn.net/zuoliangzhu/article/details/53862576
+	http://blog.csdn.net/michael_ouyang/article/details/70172207?utm_source=gold_browser_extension
 
 springboot项目参考文章:
 	http://projects.spring.io/spring-boot/
