@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import "style/weui.wxss"
+
 /*通过属性我们可以看到，小程序的布局采用的是flex布局，参考博客：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html  */
 /* .container {
   height: 100%;
@@ -14,5 +16,7 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+
 }

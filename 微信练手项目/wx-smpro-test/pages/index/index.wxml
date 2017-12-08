@@ -1,12 +1,40 @@
 <!--index.wxml  -->
-<!--触发action-sheet事件-->
-<button type="primary" bindtap="listenerButton">弹出ActionSheet</button>
-<!--默认action-sheet为隐藏，由button触发-->
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
-
-    <block wx:for-items="{{actionSheetItems}}" > 
-        <action-sheet-item >{{item}}</action-sheet-item>
+<swiper class='lee_swiper' indicator-dots='true' autoplay='true' interval='2000' duration='500'>
+    <block wx:for="{{swiperImgs}}" wx:key='{{index}}'>
+      <swiper-item>
+        <image src='{{item}}'  mode="aspectFill"/>
+      </swiper-item>
     </block>
-    <!--自动隐藏action-sheet-->
-    <action-sheet-cancel>取消</action-sheet-cancel>
-</action-sheet>
+  </swiper>
+ <view class='lee'> 
+  
+
+  <view class='lee_menu'>
+    <view class="menu_item" wx:for='{{ menuImgs }}' wx:key='{{index}}'>
+      <image src='{{item.url}}' style='width:80rpx;height:80rpx;'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <view class='lee_bd'>
+    <navigator url='../login/login.wxml' wx:for='{{shop_info}}' wx:key='{{ index }}'>
+      <view class='section section_item'>
+        <view class='section_infoLeft'>
+          <image src='{{ item.info_img }}' class='section_infoLeft_img'/>
+        </view>
+        <view class='section_infoRight'>
+          <view class='section_infoRight_top'>
+            <text class='info_title'>{{ item.info_title }}</text>
+            <text class='info_msg'>{{ item.info_msg }}</text>
+            <text class='info_price'>{{ item.info_price }}</text>
+            <text class='info_nums'>{{ item.info_nums }}</text>
+          </view>
+          <!-- <view class='section_infoRight_bottom'>
+            <text>abcdefg</text>
+          </view> -->
+        </view>
+      </view>
+    </navigator>
+  </view>
+<hr/>
+</view>  
