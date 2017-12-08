@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -31,7 +30,6 @@ import com.alibaba.druid.support.spring.stat.DruidStatInterceptor;
  */
 
 @Configuration
-//@EnableTransactionManagement
 public class DataBaseConfiguration implements EnvironmentAware{
 //	private Environment environment;
 	private RelaxedPropertyResolver propertyResolver;

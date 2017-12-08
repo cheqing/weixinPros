@@ -42,7 +42,7 @@ public class HelloController {
 		logger.warn("this is an warn logger");
 		logger.error("this is an error logger");
 		logger.debug("this is a debug logger");
-		int i = 1/0;	//异常测试
+//		int i = 1/0;	//异常测试
 		return "Hello World";
 	}
 	
@@ -56,8 +56,8 @@ public class HelloController {
 	 */
 	@RequestMapping("/")
 	public String index(){
-		String str = null;//异常测试
-		str.length();	//异常测试
+//		String str = null;//异常测试
+//		str.length();	//异常测试
 		return "index";
 	}
 	
@@ -145,6 +145,5 @@ public class HelloController {
 		Map<String, Integer> data = userService.testTran(user, "4");
 		return "新增成功 "+data.get("addNum")+" 条，"+"修改成功 "+data.get("delNum")+" 条";
 	}
-	
 	
 }

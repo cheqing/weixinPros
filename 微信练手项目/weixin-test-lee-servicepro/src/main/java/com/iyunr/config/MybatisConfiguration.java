@@ -11,13 +11,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import com.github.pagehelper.PageHelper;
 
 @Configuration
-//@EnableTransactionManagement
 public class MybatisConfiguration implements TransactionManagementConfigurer{
 	@Autowired
 	private DataBaseConfiguration dataBaseConfiguration;
