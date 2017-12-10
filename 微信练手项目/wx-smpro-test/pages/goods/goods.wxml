@@ -1,12 +1,9 @@
 <!--index.wxml  -->
-<!--触发action-sheet事件-->
-<button type="primary" bindtap="listenerButton">弹出ActionSheet</button>
-<!--默认action-sheet为隐藏，由button触发-->
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
-
-    <block wx:for-items="{{actionSheetItems}}" > 
-        <action-sheet-item >{{item}}</action-sheet-item>
+<view class='slideBar'>
+  <view class='slideBar_left'>
+    <block wx:for='{{ sideBarInfo }}'>
+      <view class='slideBar_left_item currSlideBar'>{{ item.name }}</view>
     </block>
-    <!--自动隐藏action-sheet-->
-    <action-sheet-cancel>取消</action-sheet-cancel>
-</action-sheet>
+  </view>
+  <view class='slideBar_right'></view>
+</view>

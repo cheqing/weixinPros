@@ -7,6 +7,35 @@ Page({
    */
   data: {
     // text:"这是一个页面"
+    sideBarInfo: [
+      {
+        id: 11, 
+        name: '零食', 
+        nodeItem: [
+          { name: "薯条", logo: "../imgs/logo.jpg" },
+          { name: "花生", logo: "../imgs/logo.jpg" },
+          { name: "辣条", logo: "../imgs/logo.jpg" }
+        ]
+      },
+      {
+        id: 12,
+        name: '水果',
+        nodeItem: [
+          { name: "苹果", logo: "../imgs/logo.jpg" },
+          { name: "香蕉", logo: "../imgs/logo.jpg" },
+          { name: "牛油果", logo: "../imgs/logo.jpg" }
+        ]
+      },
+      {
+        id: 13,
+        name: '饮料',
+        nodeItem: [
+          { name: "可乐", logo: "../imgs/logo.jpg" },
+          { name: "红茶", logo: "../imgs/logo.jpg" },
+          { name: "农夫山泉", logo: "../imgs/logo.jpg" }
+        ]
+      },
+    ],
     actionSheetHidden: true,
     actionSheetItems: ['item1', 'item2', 'item3']
   },

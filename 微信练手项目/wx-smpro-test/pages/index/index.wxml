@@ -1,13 +1,12 @@
 <!--index.wxml  -->
-<swiper class='lee_swiper' indicator-dots='true' autoplay='true' interval='2000' duration='500'>
-    <block wx:for="{{swiperImgs}}" wx:key='{{index}}'>
-      <swiper-item>
-        <image src='{{item}}'  mode="aspectFill"/>
-      </swiper-item>
-    </block>
-  </swiper>
  <view class='lee'> 
-  
+    <swiper class='lee_swiper' indicator-dots='true' autoplay='true' interval='2000' duration='500'>
+      <block wx:for="{{swiperImgs}}" wx:key='{{index}}'>
+        <swiper-item>
+          <image src='{{item}}'  mode="aspectFill"/>
+        </swiper-item>
+      </block>
+    </swiper>
 
   <view class='lee_menu'>
     <view class="menu_item" wx:for='{{ menuImgs }}' wx:key='{{index}}'>
