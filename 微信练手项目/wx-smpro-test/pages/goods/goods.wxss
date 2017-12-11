@@ -29,6 +29,20 @@
   border-bottom: 1px solid #dedede;
 }
 
+.slideBar_right {
+  width: 75%;
+  height: 100%;
+}
+
+.slideBar_right image {
+  width: 200rpx;
+  height: 70rpx;
+}
+
+.slideBar_right text {
+  font-size: 26rpx;
+}
+
 .section {
   margin-bottom: 10rpx;
 }

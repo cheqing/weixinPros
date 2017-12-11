@@ -5,5 +5,10 @@
       <view class='slideBar_left_item currSlideBar'>{{ item.name }}</view>
     </block>
   </view>
-  <view class='slideBar_right'></view>
+  <view class='slideBar_right'>
+    <navigator>
+      <image src='../imgs/swiper1.jpg'></image>
+      <text>品牌一号</text>
+    </navigator>
+  </view>
 </view>
