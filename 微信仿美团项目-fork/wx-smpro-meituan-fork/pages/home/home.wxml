@@ -1,6 +1,5 @@
 <import src = "../common/sort_list.wxml"/>
-<view class="mask"
-hidden="{{mask1Hidden}}" bindtap="mask1Cancel">
+<view class="mask" hidden="{{mask1Hidden}}" bindtap="mask1Cancel">
   <template is="sort_list" data="{{selected,sortSelected}}"/>
   <view class="overall-sort-list">
     <block wx:for="{{sortList}}" wx:key="">
@@ -9,8 +8,7 @@ hidden="{{mask1Hidden}}" bindtap="mask1Cancel">
     </block> 
   </view>
 </view>
-<view class="mask"
-hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
+<view class="mask" hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
   <template is="sort_list" data="{{selected,sortSelected}}"/>
   <scroll-view class="filterList" scroll-y="true" >
     <view class="filterList-characteristic-title">商家特色</view>
@@ -40,10 +38,7 @@ hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
     </view>
   </view>
 </view>
-<scroll-view bindscrolltolower="lower" 
-class="scroll-restaurants-list" 
-scroll-y="true" 
-style="height:100%">
+<scroll-view bindscrolltolower="lower" class="scroll-restaurants-list" scroll-y="true" style="height:100%">
   <view class="heard">
     <navigator url="/pages/location/location">
       <view class="heard-location">
