@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/goods/goods",
     "pages/index/index",
-    
+    "pages/goods/goods",
     "pages/mine/mine",
     "pages/shopcar/shopcar",
     "pages/indexold/indexold",

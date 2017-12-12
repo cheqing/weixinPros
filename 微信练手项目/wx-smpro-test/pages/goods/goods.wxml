@@ -6,9 +6,13 @@
     </block>
   </view>
   <view class='slideBar_right'>
-    <navigator>
+    <navigator class='slidebar_right_item'>
       <image src='../imgs/swiper1.jpg'></image>
       <text>品牌一号</text>
+    </navigator>
+    <navigator class='slidebar_right_item'>
+      <image src='../imgs/swiper2.jpg'></image>
+      <text>品牌二号</text>
     </navigator>
   </view>
 </view>
