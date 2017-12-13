@@ -7,6 +7,147 @@
   border: 1px solid black;
 } */
 
+.page {
+  width: 100%;
+  background-color: #F6F8F8;
+}
+
+.swiperList {
+  width: 100%;
+  height: 300rpx;
+  font-size: 30rpx;
+  background: #fff;
+}
+
+.swiperList swiper-item {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+
+}
+
+.swiper-item {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 25%;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFC640;
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+}
+
+.head-site {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  width: 40%;
+  height: 40rpx;
+  margin:auto 13rpx;
+  background:#B38B2D;
+  border-radius: 20rpx;
+  padding: 5rpx 12rpx;
+  color: white;
+}
+
+.head-site image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.head-site text {
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+}
+
+.head-site:after {
+  content: '';
+  width: 8rpx;
+  height: 8rpx;
+  border: 3rpx solid #fff;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.head-search {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  width: 50%;
+  height: 40rpx;
+  margin:auto 13rpx;
+  background:#fff;
+  border-radius: 20rpx;
+  padding: 5rpx 12rpx;
+  color: black;
+}
+
+.head-search image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.head-search text {
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+}
+
+.body-title {
+  width:100%;
+  height:60rpx;
+  line-height: 60rpx;
+  text-align:center;
+  margin-top:20rpx;
+  background:#fff;
+  font-size:34rpx;
+  font-weight: bold;
+}
+
+.sort-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  margin-top:4rpx;
+  background:#fff;
+  font-size:30rpx;
+  border: 1px solid #ECECEC;
+}
+
+.sort {
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid #ECECEC;
+}
+
+.sort image {
+  width: 22rpx;
+  height: 22rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .slideBar {
   width: 100%;
   height: 100%;

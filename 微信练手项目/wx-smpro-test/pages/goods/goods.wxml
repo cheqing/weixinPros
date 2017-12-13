@@ -1,18 +1,47 @@
 <!--index.wxml  -->
-<view class='slideBar'>
-  <view class='slideBar_left'>
-    <block wx:for='{{ sideBarInfo }}'>
-      <view class='slideBar_left_item currSlideBar'>{{ item.name }}</view>
-    </block>
+<view class='page'>
+  <view class='head'>
+    <view class='head-site'>
+      <navigator url='/pages/site/site'>
+        <image src='/pages/imgs/location.png'/>
+        <text>{{ site }}</text>
+      </navigator>
+    </view>
+    <view class='head-search'>
+      <image src="/pages/imgs/search.png"/>
+      <text>照烧鸡排</text>
+    </view>
   </view>
-  <view class='slideBar_right'>
-    <navigator class='slidebar_right_item'>
-      <image src='../imgs/swiper1.jpg'></image>
-      <text>品牌一号</text>
-    </navigator>
-    <navigator class='slidebar_right_item'>
-      <image src='../imgs/swiper2.jpg'></image>
-      <text>品牌二号</text>
-    </navigator>
+
+  <swiper class='swiperList' indicator-dots='true' indicator-active-color="#FFC640" interval='2000' duration='500'>
+    <block wx:for="{{swiperItem}}" wx:key='{{index}}'>
+      <swiper-item>
+        <block wx:for="{{item}}" wx:key='{{index}}'>
+          <view class='swiper-item'>
+              <image src='{{item.url}}' style='width:80rpx;height:80rpx;'></image>
+              <text>{{item.name}}</text>
+          </view>
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='body-title'>附近商家</view>
+
+  <view class='sort-list'>
+    <view class='sort'>
+      综合排序
+      <image src='/pages/imgs/down.png'></image>
+    </view>
+    <view class='sort'>销量最高</view>
+    <view class='sort'>距离最近</view>
+    <view class='sort'>
+      筛选
+      <image src="/pages/imgs/screen.png"></image>
+    </view>
+  </view>
+
+  <view class='mask'>
+
   </view>
 </view>

@@ -58,7 +58,6 @@ Page({
         { name: '电影', url: '../imgs/food.png' }
       ]
     },
-    site: '燕莎盛世大厦',
     actionSheetHidden: true,
     actionSheetItems: ['item1', 'item2', 'item3']
   },
