@@ -1,5 +1,25 @@
 <!--index.wxml  -->
+<import src='/pages/common/sortList.wxml'/>
 <view class='page'>
+  <view class='mask' hidden='{{maskSortHidden}}' catchtap='onSortHide'>
+    <template is='sortList' data='{{sortSelected,sortActive}}'></template>
+    <view class='mask-sort-list'>
+      <block wx:for='{{sortList}}' wx:key='{{index}}'>
+        <view class='mask-sort-item {{item.name==sortSelected? "mask-sort-item-active":""}}' data-index='{{index}}' catchtap='onSortSelect'>{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+  
+  <view class='mask' hidden='{{maskFilterHidden}}' catchtap='onFilterHide'>
+    <template is='sortList' data='{{sortSelected,sortActive}}'></template>
+    <view class='mask-filter-feature-title'>商家特色</view>
+    <view class='mask-filter-feature-list'>
+      <block wx:for='{{shopFeatureList}}' wx:key='{{index}}'>
+        <view class='feature-item {{item.name==featureSelected? "feature-item-active":""}}' data-index='{{index}}' catchtap='onFilterHide'>{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+
   <view class='head'>
     <view class='head-site'>
       <navigator url='/pages/site/site'>
@@ -17,7 +37,7 @@
     <block wx:for="{{swiperItem}}" wx:key='{{index}}'>
       <swiper-item>
         <block wx:for="{{item}}" wx:key='{{index}}'>
-          <view class='swiper-item'>
+          <view class='swiper-item-info'>
               <image src='{{item.url}}' style='width:80rpx;height:80rpx;'></image>
               <text>{{item.name}}</text>
           </view>
@@ -27,21 +47,26 @@
   </swiper>
 
   <view class='body-title'>附近商家</view>
-
-  <view class='sort-list'>
-    <view class='sort'>
-      综合排序
-      <image src='/pages/imgs/down.png'></image>
-    </view>
-    <view class='sort'>销量最高</view>
-    <view class='sort'>距离最近</view>
-    <view class='sort'>
-      筛选
-      <image src="/pages/imgs/screen.png"></image>
-    </view>
+  <template is='sortList' data='{{sortSelected,sortActive}}'></template>
+  <view class='shop-list'>
+    <block wx:for='{{shop_list}}' wx:key='{{index}}'>
+      <navigator>
+        <view class='section shop-item'>
+          <view class='shop-item-left'>
+            <image src='{{item.shop_img}}' mode='aspectFit'></image>
+          </view>
+          <view class='shop-item-right'>
+            <view class='shop-item-right-up'>
+              <text class='shop-title'>{{item.shop_title}}</text>
+              <text class='shop-msg'>{{item.shop_msg}}</text>
+              <text class='shop-price'>{{item.shop_price}}</text>
+              <text class='shop-nums'>{{item.shop_nums}}</text>
+            </view>
+            <!-- <view class='shop-item-right-down'></view> -->
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
-
-  <view class='mask'>
-
-  </view>
+  
 </view>

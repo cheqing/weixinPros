@@ -1,0 +1,14 @@
+<template name='sortList'>
+  <view class='sort-list'>
+    <view class='sort' catchtap='onSortShow'>
+      {{sortSelected}}
+      <image src='/pages/imgs/down.png'></image>
+    </view>
+    <view data-index='0' class='sort {{sortActive==0? "sort_active":""}}' catchtap='onTapTag'>销量最高</view>
+    <view data-index='1' class='sort {{sortActive==1? "sort_active":""}}' catchtap='onTapTag'>距离最近</view>
+    <view class='sort' catchtap='onFilterShow'>
+      筛选
+      <image src="/pages/imgs/screen.png"></image>
+    </view>
+  </view>
+</template>
