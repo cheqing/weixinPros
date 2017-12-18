@@ -1,12 +1,18 @@
+<!-- 
+  这里可能会有人有个疑问，为什么此处的点击事件使用bindtap而不是catchtap，也就是为何要让他冒泡呢，
+  我们知道冒泡的话事件会向上传递，也就是点击此处的事件，他父级的事件夜壶被调用，当我们在综合排序和筛选
+  进行切换的时候，会冒泡到父级的隐藏事件，这样就可以实现切换了，当然你也可以说在切换的方法中将需要的隐藏掉
+  那面经过我的实验，这样的切换很不友好，用户会明显的感觉到页面闪动。
+ -->
 <template name='sortList'>
   <view class='sort-list'>
-    <view class='sort' catchtap='onSortShow'>
+    <view class='sort' bindtap='onSortShow'>
       {{sortSelected}}
       <image src='/pages/imgs/down.png'></image>
     </view>
-    <view data-index='0' class='sort {{sortActive==0? "sort_active":""}}' catchtap='onTapTag'>销量最高</view>
-    <view data-index='1' class='sort {{sortActive==1? "sort_active":""}}' catchtap='onTapTag'>距离最近</view>
-    <view class='sort' catchtap='onFilterShow'>
+    <view data-index='0' class='sort {{sortActive==0? "sort_active":""}}' bindtap='onTapTag'>销量最高</view>
+    <view data-index='1' class='sort {{sortActive==1? "sort_active":""}}' bindtap='onTapTag'>距离最近</view>
+    <view class='sort' bindtap='onFilterShow'>
       筛选
       <image src="/pages/imgs/screen.png"></image>
     </view>

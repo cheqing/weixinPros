@@ -3,20 +3,38 @@
 <view class='page'>
   <view class='mask' hidden='{{maskSortHidden}}' catchtap='onSortHide'>
     <template is='sortList' data='{{sortSelected,sortActive}}'></template>
-    <view class='mask-sort-list'>
+     <view class='mask-sort-list'>
       <block wx:for='{{sortList}}' wx:key='{{index}}'>
         <view class='mask-sort-item {{item.name==sortSelected? "mask-sort-item-active":""}}' data-index='{{index}}' catchtap='onSortSelect'>{{item.name}}</view>
       </block>
-    </view>
+    </view> 
   </view>
   
   <view class='mask' hidden='{{maskFilterHidden}}' catchtap='onFilterHide'>
     <template is='sortList' data='{{sortSelected,sortActive}}'></template>
-    <view class='mask-filter-feature-title'>商家特色</view>
-    <view class='mask-filter-feature-list'>
-      <block wx:for='{{shopFeatureList}}' wx:key='{{index}}'>
-        <view class='feature-item {{item.name==featureSelected? "feature-item-active":""}}' data-index='{{index}}' catchtap='onFilterHide'>{{item.name}}</view>
-      </block>
+    <view class='mask-filter-lists'>
+      <view class='mask-filter-feature-title'>商家特色</view>
+      <view class='mask-filter-feature-list'>
+        <block wx:for='{{shopFeatureList}}' wx:key='{{index}}'>
+          <view class='feature-item {{featureSelected[index]==true? "feature-item-active":""}}' data-index='{{index}}' catchtap='onFeatureSelect'>{{item.text}}</view>
+        </block>
+      </view>
+      <view class='mask-filter-discount-title'>优惠活动(单选)</view>
+      <view class='mask-filter-discount-list'>
+        <block wx:for='{{shopDiscountList}}' wx:key='{{index}}'>
+          <view class='discount-item {{discountSelected==index? "discount-item-active":""}}' data-index='{{index}}' catchtap='onDiscountSelect'>
+            <text class='discount-icon' style='background: {{item.iconColor}}'>{{item.icon}}</text>
+            <text class='discount-text' data-index='{{index}}'>{{item.text}}</text>
+          </view>
+        </block>
+      </view>
+    </view> 
+    <view class='mask-filter-footer'>
+      <view class='mask-filter-footer-clear' catchtap='onFilterClear'>清除筛选</view>
+      <!-- 此处的事件需要冒泡，点击完成就可以直接关闭模态层了 -->
+      <view class='mask-filter-footer-finish' bindtap='onFilterFinish'>
+      完成 <view class='filter-filterSelected' hidden='{{filterSelected==0}}'>{{filterSelected}}</view>
+      </view>
     </view>
   </view>
 

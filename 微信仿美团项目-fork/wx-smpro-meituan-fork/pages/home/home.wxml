@@ -1,16 +1,16 @@
 <import src = "../common/sort_list.wxml"/>
 <view class="mask" hidden="{{mask1Hidden}}" bindtap="mask1Cancel">
   <template is="sort_list" data="{{selected,sortSelected}}"/>
-  <view class="overall-sort-list">
+   <view class="overall-sort-list">
     <block wx:for="{{sortList}}" wx:key="">
     <view class="overall-sort" data-index="{{index}}" 
     bindtap="sortSelected">{{item.sort}}</view>
     </block> 
-  </view>
+  </view> 
 </view>
 <view class="mask" hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
   <template is="sort_list" data="{{selected,sortSelected}}"/>
-  <scroll-view class="filterList" scroll-y="true" >
+   <scroll-view class="filterList" scroll-y="true" >
     <view class="filterList-characteristic-title">商家特色</view>
     <view class="filterList-characteristic-items">
       <block wx:for="{{characteristicList}}" wx:key="">
@@ -36,7 +36,7 @@
     <view class="filterList-footer-finish-number" hidden="{{selectedNumb==0}}">{{selectedNumb}}
     </view>
     </view>
-  </view>
+  </view> 
 </view>
 <scroll-view bindscrolltolower="lower" class="scroll-restaurants-list" scroll-y="true" style="height:100%">
   <view class="heard">

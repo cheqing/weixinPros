@@ -124,6 +124,7 @@ Page({
     sortSelected: "综合排序"
   },
   finish: function () {
+    console.log("finish")
     var that = this;
     wx.request({
       url: "https://www.easy-mock.com/mock/596257bc9adc231f357c4664/restaurant/filter",
@@ -136,6 +137,7 @@ Page({
     });
   },
   sortSelected: function (e) {
+    console.log("sortSelected")
     var that = this;
     wx.request({
       url: "https://www.easy-mock.com/mock/596257bc9adc231f357c4664/restaurant/overAll",
@@ -149,6 +151,7 @@ Page({
     });
   },
   clearSelectedNumb: function () {
+    console.log("clearSelectedNumb")
     this.setData({
       characteristicSelected: [false],
       discountSelected: null,
@@ -156,6 +159,7 @@ Page({
     })
   },
   characteristicSelected: function (e) {
+    console.log("characteristicSelected")
     var info = this.data.characteristicSelected;
     info[e.currentTarget.dataset.index] = !info[e.currentTarget.dataset.index];
     this.setData({
@@ -165,6 +169,7 @@ Page({
     console.log(e.currentTarget.dataset.index);
   },
   discountSelected: function (e) {
+    console.log("discountSelected")
     if (this.data.discountSelected != e.currentTarget.dataset.index){
       this.setData({
         discountSelected: e.currentTarget.dataset.index,
@@ -183,21 +188,25 @@ Page({
     });
   },
   mask1Cancel: function () {
+    console.log("mask1Hidden: true")
     this.setData({
       mask1Hidden: true
     })
   },
   mask2Cancel: function () {
+    console.log("mask2Hidden: true")
     this.setData({
       mask2Hidden: true
     })
   },
   onOverallTag: function () {
+    console.log("mask1Hidden: false")
     this.setData({
       mask1Hidden: false
     })
   },
   onFilter: function () {
+    console.log("mask2Hidden: false")
     this.setData({
       mask2Hidden: false
     })

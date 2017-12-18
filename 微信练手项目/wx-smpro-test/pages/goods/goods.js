@@ -101,14 +101,24 @@ Page({
     maskFilterHidden: true,
     sortActive:0,
     shopFeatureList:[
-      { name: '免费配送', img: '' },
-      { name: '0元起送', img: '' },
-      { name: '新商家', img: '' },
-      { name: '品牌商家', img: '' },
-      { name: '超时免赔', img: '' },
+      { text: '免费配送', img: '' },
+      { text: '0元起送', img: '' },
+      { text: '新商家', img: '' },
+      { text: '品牌商家', img: '' },
+      { text: '超时免赔', img: '' },
     ],
     featureSelected: [],
-    featureItemActive:0
+    discountSelected: null,
+    filterSelected:0,
+    shopDiscountList: [
+      { text: '满减优惠', icon: '减', iconColor: '#FF635B' },
+      { text: '进店领券', icon: '领', iconColor: '#FF7298' },
+      { text: '满反代金券', icon: '反', iconColor: '#FF4343' },
+      { text: '折扣商品', icon: '折', iconColor: '#C183E2' },
+      { text: '提前下单优惠', icon: '订', iconColor: '#6FDF64' },
+      { text: '满赠活动', icon: '赠', iconColor: '#FDC41E' },
+      { text: '满免配送', icon: '免', iconColor: '#43B697' }
+    ]
   },
   // 点击排序，弹出模态层
   onSortShow: function(e){
@@ -157,12 +167,79 @@ Page({
     this.onSortHide()
     this.onFilterHide()
   },
+
+  // 商家特色选中事件
+  onFeatureSelect: function(e){
+    // 判断选中的‘商家特色’属性是否已被选中，并改变其选中值
+    // if (this.data.shopFeatureList[e.currentTarget.dataset.index].selected != null || this.data.shopFeatureList[e.currentTarget.dataset.index].selected){
+    //   delete this.data.shopFeatureList[e.currentTarget.dataset.index].selected
+    //   //将选中属性的数量-1
+    //   this.data.filterSelected = this.data.filterSelected - 1
+    // }else{
+    //   this.data.shopFeatureList[e.currentTarget.dataset.index].selected = true
+    //   //将选中属性的数量+1
+    //   this.data.filterSelected = this.data.filterSelected + 1
+    // }
+    // this.setData({
+    //   shopFeatureList: this.data.shopFeatureList,
+    //   filterSelected: this.data.filterSelected
+    // });
+    // console.log(this.data.shopFeatureList)
+
+    // 将选中的商家特色赋值为true，并对选中的总结果+1
+    var info = this.data.featureSelected
+    info[e.currentTarget.dataset.index] = !info[e.currentTarget.dataset.index];
+    this.setData({
+      featureSelected: info,
+      filterSelected: this.data.filterSelected + (info[e.currentTarget.dataset.index] ? 1 : -1)
+    });
+  },
+
+  // 优惠活动选中事件
+  onDiscountSelect: function(e){
+    // 将选中的优惠活动索引值进行赋值
+    if (this.data.discountSelected != e.currentTarget.dataset.index){
+      this.setData({
+        discountSelected: e.currentTarget.dataset.index,
+        filterSelected: this.data.filterSelected + (this.data.discountSelected==null? 1:0)
+      });
+    }else{
+      this.setData({
+        discountSelected: null,
+        filterSelected: this.data.filterSelected - 1
+      });
+    }
+  },
+
+  // 筛选-清除点击事件
+  onFilterClear: function(e){
+    // 清空商家特色选中值
+    this.setData({
+      'featureSelected': [false],
+      discountSelected: null,
+      filterSelected: 0
+    })
+  },
+
+  // 筛选-完成点击事件
+  onFilterFinish: function(e){
+    // 这里可以将用户选中的商家特色和优惠活动传送给后台，后台来处理业务逻辑然后返回新的数据进行展示
+    
+
+  },
   
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    //页面加载时对商家特色选中值进行初始化，默认都是false，没有选中,有几个商家特色，就要初始化几个对应的默认选中,如果只有一个默认值的话那么在页面初次渲染的时候讲会出错
+    for (var i = 0; i < this.data.shopFeatureList.length; i++){
+      this.data.featureSelected[i] = false
+    }
+    this.setData({
+      featureSelected: this.data.featureSelected
+    })
+    // console.log(this.data.featureSelected);
   },
 
   /**
