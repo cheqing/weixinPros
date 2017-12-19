@@ -68,7 +68,7 @@
   <template is='sortList' data='{{sortSelected,sortActive}}'></template>
   <view class='shop-list'>
     <block wx:for='{{shop_list}}' wx:key='{{index}}'>
-      <navigator>
+      <navigator url='/pages/menu/menu'>
         <view class='section shop-item'>
           <view class='shop-item-left'>
             <image src='{{item.shop_img}}' mode='aspectFit'></image>
