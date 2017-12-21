@@ -23,6 +23,7 @@
   width:22%;
   background:#F4F4F4;
   font-size:28rpx;
+  height: 1110rpx;
 }
 
 .menu-sidebar-item {
@@ -31,24 +32,43 @@
   text-align:center;
   border-bottom:1px solid #ececec;
   width:100%;
+  position: relative;
+}
+
+.menu-sidebar-item-active::before {
+  /* border-left:2px solid #FFC640; */
+  content: "";
+  position: absolute;
+  left: -1rpx;
+  top: 24rpx;
+  height: 36rpx;
+  width: 7rpx;
+  background: #FFD161;
 }
 
 .menu-foodList {
   width: 78%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ececec;
 }
 
 .menu-foodList-title {
   font-size: 24rpx;
+  height:40rpx;
+  line-height:40rpx;
+  padding:10rpx 20rpx;
 }
 
 .menu-foodList-item {
+  position: relative;
   width: 100%;
   display: flex;
-  flex-direction:row;
-  /*justify-content:flex-start;*/
   align-items:center;
   height: 180rpx;
   background: #fff;
+  border-bottom: 1px solid #ececec;
 }
 
 .menu-foodList-item-img {
@@ -62,7 +82,7 @@
 }
 
 .menu-foodList-item-info {
-  width: 70%;
+  width: 50%;
   font-size: 26rpx;
 }
 
@@ -73,15 +93,58 @@
 
 .food-sales {
   font-size: 28rpx;
+  color: #acacac;
 }
 
 .food-price {
   font-size: 30rpx;
+  color: red;
 }
 
-.food-nums {
-  font-size: 30rpx;
-  float: right;
+ .menu-foodList-item-nums {
+  width: 20%;
+  /*height: 100%;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*align-self: flex-end;*/
+  /*align-items: flex-end;*/
+  margin-top: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+} 
+
+.reduce, .add {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  border-color: #b0b0b0;
+  line-height: 25rpx;
+  text-align: center;
+}
+
+.reduce {
+  border:2rpx;
+  border-style: solid;
+  box-sizing: border-box;
+  font-size: 50rpx;
+  line-height: 18rpx;
+  margin-top: 8rpx;
+  margin-right: 8rpx;
+  color: #b0b0b0;
+  border-color: #b0b0b0;
+}
+
+.text {
+  font-size: 24rpx;
+}
+
+.add {
+  margin-left: 8rpx;
+  margin-top: 8rpx;
+  background: #ffd161;
+  font-size: 36rpx;
+  line-height: 26rpx;
 }
 
 .section {

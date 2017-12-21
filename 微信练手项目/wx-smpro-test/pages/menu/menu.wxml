@@ -15,24 +15,31 @@
                     <view class='menu'>
                         <view class="menu-sidebar">
                             <block wx:for='{{menu}}' wx:key='{{index}}'>
-                                <view class='menu-sidebar-item'>{{item.typeName}}</view>
+                                <view class='menu-sidebar-item {{currMenu==index? "menu-sidebar-item-active": ""}}' data-index='{{index}}' bindtap='onMenuSidebar'>{{item.typeName}}</view>
                             </block>
                         </view>
                         <view class="menu-foodList">
-                            <view class="menu-foodList-title">xxxxx\r\n</view>
-                            <view class="menu-foodList-item  section">
+                            <view class="menu-foodList-title">{{menu[currMenu].typeName}}</view>
+                            <block wx:for='{{menu[currMenu].content}}' wx:key='{{index}}'>
+                              <view class="menu-foodList-item">
                                 <view class="menu-foodList-item-img">
-                                    <image src='http://i2.kiimg.com/601998/a955867016875a41.jpg' mode='aspectFit'></image>
+                                    <image src='{{item.img}}' mode='aspectFit'></image>
                                 </view>
                                 <view class="menu-foodList-item-info">
-                                    <view class="food-name">aaaa\r\n</view>
-                                    <view class="food-sales">月售 25  赞 3\r\n</view>
-                                    <view class="food-price">￥ 22</view>
-                                    <view class="food-nums">304</view>
+                                    <view class="food-name">{{item.name}}</view>
+                                    <view class="food-sales">月售 {{item.sales}}  赞 {{item.rating}}</view>
+                                    <view class="food-price">￥ {{item.price}}</view>
                                 </view>
-                            </view>
-
+                                <view class="menu-foodList-item-nums">
+                                  <view class='reduce'>-</view>
+                                  <text class='text'>3</text>
+                                  <view class='add'>+</view>
+                                </view>
+                              </view>
+                            </block>
+                            
                         </view>
+                        
                     </view>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
