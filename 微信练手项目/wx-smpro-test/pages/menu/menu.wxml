@@ -31,9 +31,9 @@
                                     <view class="food-price">￥ {{item.price}}</view>
                                 </view>
                                 <view class="menu-foodList-item-nums">
-                                  <view class='reduce'>-</view>
-                                  <text class='text'>3</text>
-                                  <view class='add'>+</view>
+                                  <view class='reduce' catchtap='onReduce' data-index='{{index}}' hidden='{{menu[currMenu].content[index].nums==0? true:false}}'>-</view>
+                                  <text class='text' hidden='{{menu[currMenu].content[index].nums==0? true:false}}'>{{menu[currMenu].content[index].nums}}</text>
+                                  <view class='add' catchtap='onAdd' data-index='{{index}}'>+</view>
                                 </view>
                               </view>
                             </block>
