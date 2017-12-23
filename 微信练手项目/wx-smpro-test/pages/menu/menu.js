@@ -5,6 +5,7 @@ Page({
     tabs: ["点菜", "评价", "商家"],  // 导航栏选项
     activeIndex: 0, // 顶部导航栏选中项
     currMenu: 0,  //左侧菜单栏选中项
+    amount: 0,
     // foodNums: 0,
     // sliderOffset: 0,
     // sliderLeft: 0,

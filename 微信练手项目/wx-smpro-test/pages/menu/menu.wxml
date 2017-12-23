@@ -37,9 +37,17 @@
                                 </view>
                               </view>
                             </block>
-                            
                         </view>
-                        
+                        <view class='menu_footer'>
+                          <view class='footer_money'>
+                            <view class='money_img'>
+                              <image src='/pages/imgs/trolley.png'/>
+                            </view>
+                             <view class='money_cost'>￥20</view> 
+                            <view class='money_send'>免费配送</view>
+                          </view>
+                          <view class='footer_pay'>去结算</view>
+                        </view>   
                     </view>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
