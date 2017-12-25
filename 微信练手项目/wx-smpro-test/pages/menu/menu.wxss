@@ -11,6 +11,8 @@
   width: 100%;
   background-color: #F6F8F8;
   font-family:"微软雅黑"; 
+  height:100%;
+  position:fixed;
 }
 
 .menu {
@@ -23,7 +25,7 @@
   width:22%;
   background:#F4F4F4;
   font-size:28rpx;
-  height: 1110rpx;
+  /* height: 1110rpx; */
 }
 
 .menu-sidebar-item-active::before {
@@ -173,8 +175,8 @@
   margin-bottom: 10rpx;
 }
 
-.menu_footer {
-  position:absolute;
+.menu-footer {
+  position:fixed;
   left:0rpx;
   right:0rpx;
   bottom:0rpx;
@@ -182,7 +184,7 @@
   height: 100rpx;
 }
 
-.footer_money {
+.footer-money {
   background:#fff;
   position:relative;
   width:70%;
@@ -190,11 +192,10 @@
   line-height: 100rpx;
 }
 
-.money_img{
+.money-img{
   position:absolute;
   width:90rpx;
   height:90rpx;
-  background:#b0b0b0;
   border-radius:50%;
   left:20rpx;
   bottom:60rpx;
@@ -203,12 +204,12 @@
   align-items:center;
 }
 
-.money_img image {
+.money-img image {
   width: 60rpx;
   height: 60rpx;
 }
 
-.money_cost {
+.money-cost {
   font-size:50rpx;
   color:red;
   line-height:50rpx;
@@ -216,16 +217,16 @@
   height:50rpx;
 }
 
-.money_send {
+.money-send {
   font-size:26rpx;
 }
 
-.money_send_active {
+.money-send-active {
   height:40rpx;
   line-height:40rpx; 
 }
 
-.footer_pay {
+.footer-pay {
   width:30%;
   background:#CCC;
   text-align:center;

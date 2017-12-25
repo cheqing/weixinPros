@@ -1,12 +1,27 @@
 <!--index.wxml  -->
 <!--触发action-sheet事件-->
-<button type="primary" bindtap="listenerButton">弹出ActionSheet</button>
+<!-- <button type="primary" bindtap="listenerButton">弹出ActionSheet</button> -->
 <!--默认action-sheet为隐藏，由button触发-->
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
+<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" >
 
     <block wx:for-items="{{actionSheetItems}}" > 
         <action-sheet-item >{{item}}</action-sheet-item>
-    </block>
+    </block> -->
     <!--自动隐藏action-sheet-->
-    <action-sheet-cancel>取消</action-sheet-cancel>
-</action-sheet>
+    <!-- <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet> -->
+
+<view class='page'>
+  <view class='mine-title'>
+    <view class='title-headImg'>
+      <image src='/pages/imgs/logo.jpg'/>
+    </view>
+    <view class='title-headName'>Tom</view>
+  </view>
+  <view class='mine-userInfo'>
+    <text>默认收货地址：北京市超逸178 \r\n 客服电话：400 345 8763</text>
+  </view>
+  <view class='quit'>
+    退出账号
+  </view>
+</view>

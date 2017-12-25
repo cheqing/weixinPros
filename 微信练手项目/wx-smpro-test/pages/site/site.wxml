@@ -1,8 +1,9 @@
-<!--index.wxml  -->
+<!--site.wxml  -->
 <view class='page'>
   <view class='head'>
     <view class='search-site-input'>
       <input placeholder='请输入地址'/>
+      <button></button>
     </view>
   </view>
 
