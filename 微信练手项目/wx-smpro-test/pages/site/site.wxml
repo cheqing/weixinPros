@@ -1,26 +1,26 @@
 <!--site.wxml  -->
-<view class='page'>
+<!-- <view class='page'> -->
   <view class='head'>
-    <view class='search-site-input'>
-      <input placeholder='请输入地址'/>
-      <button></button>
+    <view class='search-site'>
+      <input class='search-input' placeholder='请输入地址' bindinput='onInputSite'/>
+      <view class='search-btn'>搜索</view>
     </view>
   </view>
 
-  <swiper class='swiperList' indicator-dots='true' indicator-active-color="#FFC640" interval='2000' duration='500'>
-    <block wx:for="{{swiperItem}}" wx:key='{{index}}'>
-      <swiper-item>
-        <block wx:for="{{item}}" wx:key='{{index}}'>
-          <view class='swiper-item'>
-              <image src='{{item.url}}' style='width:80rpx;height:80rpx;'></image>
-              <text>{{item.name}}</text>
-          </view>
-        </block>
-      </swiper-item>
+  <view class='site-list' hidden='{{siteListHidden}}'>
+    <block wx:for='{{siteList}}' wx:key='{{index}}'>
+      <view class='site-item' data-site='{{item.name}}' bindtap='onSiteItem'>
+        {{item.name}}
+        <view class='site-desc'>{{item.address}}</view>
+      </view>
     </block>
-  </swiper>
-
-  <view class='mask'>
-
   </view>
-</view>
+
+   <view class='curr-site' bindtap='onCurrSite'>点击定位当前位置</view>
+
+  <view class='takeGoods-site'>
+    <view class='add-text'>新增收货地址</view>
+    <view class='add-icon'>+</view>
+  </view> 
+
+<!-- </view> -->

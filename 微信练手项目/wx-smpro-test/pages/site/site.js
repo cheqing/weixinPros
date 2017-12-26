@@ -59,7 +59,9 @@ Page({
       ]
     },
     actionSheetHidden: true,
-    actionSheetItems: ['item1', 'item2', 'item3']
+    actionSheetItems: ['item1', 'item2', 'item3'],
+    siteListHidden: true,
+    siteList: []
   },
   listenerButton: function () {
     this.setData({
@@ -72,6 +74,74 @@ Page({
     this.setData({
       actionSheetHidden: !this.data.actionSheetHidden
     })
+  },
+
+  // 地址输入人事件
+  onInputSite: function(e){
+    // 获取输入内容
+    var siteName = e.detail.value;
+    if(siteName){
+      // 调用Baidu地址检索接口
+      this.searchSite(siteName);
+      this.setData({
+        siteListHidden: false
+      });
+    }else{
+      this.setData({
+        siteListHidden: true
+      });
+    }
+  },
+
+  searchSite: function(siteName){
+    var that = this;
+    wx.request({
+      url: "http://api.map.baidu.com/place/v2/search?query=" + siteName +"&page_size=20&page_num=0&region=北京&output=json&ak=btsVVWf0TM1zUBEbzFz6QqWF",
+      success: function(data){
+        console.log(data);
+        that.setData({
+          siteList: data.data.results
+        });
+      }
+    })
+  },
+
+  // 选中地址事件
+  onSiteItem: function(e){
+    // 将选中的地址缓存在本地
+    wx.setStorageSync('site', e.currentTarget.dataset.site.substr(e.currentTarget.dataset.site.indexOf('市') + 1, 7))
+    // 跳转到首页
+    wx.switchTab({
+      url: '/pages/goods/goods',
+    })
+  },
+
+// 点击定位当前位置事件
+  onCurrSite: function(e){
+    // 获取地理位置
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        // 获取经纬度信息
+        var latitude = res.latitude;
+        var longitude = res.longitude;
+        // 通过获取到的经纬度信息调用Baidu地图api接口反向获取地址位置
+        wx.request({
+          url: "http://api.map.baidu.com/geocoder/v2/?location=" + latitude + "," + longitude + "&output=json&pois=0&ak=btsVVWf0TM1zUBEbzFz6QqWF",
+          method: 'get',
+          success: function (res) {
+            console.log(res.data.result.formatted_address);
+            wx.setStorageSync('site', res.data.result.formatted_address.substr(res.data.result.formatted_address.indexOf('市') + 1, 7))
+
+            // 跳转到首页
+            wx.switchTab({
+              url: '/pages/goods/goods',
+            })
+          }
+        })
+      },
+    })
+
   },
   
   /**

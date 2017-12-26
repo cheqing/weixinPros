@@ -58,7 +58,7 @@ Page({
         { name: '电影', url: '../imgs/food.png' }
       ]
     },
-    site: '燕莎盛世大厦',
+    site: '',
     shop_list: [
       {
         shop_img: 'http://i4.piimg.com/601998/23f361491b45ddf2.jpg',
@@ -253,7 +253,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    // 从缓存中获取用户选中的地址
+    var site = wx.getStorageSync('site')
+    this.setData({
+      site: site
+    })
   },
 
   /**
