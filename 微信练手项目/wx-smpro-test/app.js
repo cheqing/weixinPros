@@ -10,14 +10,14 @@ App({
         var latitude = res.latitude;
         var longitude = res.longitude;
         // 通过获取到的经纬度信息调用Baidu地图api接口反向获取地址位置
-        wx.request({
-          url: "http://api.map.baidu.com/geocoder/v2/?location=" + latitude + "," + longitude +"&output=json&pois=0&ak=btsVVWf0TM1zUBEbzFz6QqWF",
-          method: 'get',
-          success: function(res){
-            console.log(res.data.result.formatted_address);
-            wx.setStorageSync('site', res.data.result.formatted_address.substr(res.data.result.formatted_address.indexOf('市') + 1, 7))
-          }
-        })
+        // wx.request({
+        //   url: "http://api.map.baidu.com/geocoder/v2/?location=" + latitude + "," + longitude +"&output=json&pois=0&ak=btsVVWf0TM1zUBEbzFz6QqWF",
+        //   method: 'get',
+        //   success: function(res){
+        //     console.log(res.data.result.formatted_address);
+        //     wx.setStorageSync('site', res.data.result.formatted_address.substr(res.data.result.formatted_address.indexOf('市') + 1, 7))
+        //   }
+        // })
       },
     })
 
