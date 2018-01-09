@@ -5,6 +5,7 @@
     "pages/menu/menu",
     "pages/mine/mine",
     "pages/shopcar/shopcar",
+    "pages/site/site",
     "pages/indexold/indexold",
     "pages/logs/logs",
     "pages/login/login"
