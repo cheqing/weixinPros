@@ -10,5 +10,8 @@
 } 
 
 .page {
-  
+  width: 100%;
+  font-family:"微软雅黑"; 
+  height:100%;
+  position:fixed;
 }
