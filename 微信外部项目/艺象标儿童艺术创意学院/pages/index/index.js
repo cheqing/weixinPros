@@ -4,10 +4,11 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    info:{
+      addr:'燕郊开发区富地广场E座二层艺象标儿童创艺美术中心',
+      time:"09:00 -- 22:00",
+      phone:"0316-5752052"
+    }
   },
   //事件处理函数
   bindViewTap: function() {
