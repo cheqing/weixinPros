@@ -1,8 +1,55 @@
 <!--index.wxml-->
 <view class="page">
+  <view class='shop-logo'>
+    <image src='{{logo}}' mode='scaleToFill'></image>
+  </view>
   <view class='shop-info'>
-    <view class='shop-addr'>{{info.addr}}</view>
-    <view class='shop-time'>{{info.time}}</view>
-    <view class='shop-phone'>{{info.phone}}</view>
+    <view class='shop-addr'>
+      <image src='../../imgs/addr.png' mode='aspectFit' class='shop-info-icon'></image>
+      {{info.addr}}
+    </view>
+    <view class='shop-time'>
+      <image src='../../imgs/time.png' mode='aspectFit' class='shop-info-icon' style='width:37rpx'></image>
+      {{info.time}}
+    </view>
+    <view class='shop-phone' hover-class='tapPhone' bindtap='tapPhone'>
+      <image src='../../imgs/phone.png' mode='aspectFit' class='shop-info-icon' style='width:34rpx;'></image>
+      {{info.phone}}
+    </view>
+  </view>
+
+  <view class='shop-desc section'>
+    <view class='shop-desc-text'>门店照片</view>
+    <view class='shop-desc-info'>
+      Arts Sign 来自美国，是一家结合儿童生理、心理发展特征， 培养儿童艺术素养与能力的专业美术教育机构。以创艺美术为载体， 以国内独有的“三法”（电影教学法、体感互动教学法、音乐氛围 引导法）为指导，让儿童在浸入式、互动式、体验式、情景式教学 氛围中全面开发“三力”（观察力、 想象力、鉴赏力）和“三商” （IQ、EQ、AQ）。颠覆传统以美术技能为主的教学模式，培养儿 童具有艺术表达和创艺表现的审美情趣，引导儿童发现美、体验美、 创作美、分享美。引领儿童创艺美术的3.0时代。
+    </view>
+  </view>
+
+  <view class='shop-imgs section'>
+    <view class='shop-imgs-text'>门店照片</view>
+    <!-- <view class='shop-imgs-img'>
+      <block wx:for="{{imgs}}" wx:key="{{index}}">
+        <view class='shop-img-row'>
+          <block wx:for='{{item}}' wx:key='{{index}}'>
+            <view class='img-item'>
+              <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' bindtap='lookImg' class='shop-img'></image> 
+            </view>
+          </block>
+        </view>
+      </block>
+    </view> -->
+
+    <view class='imgs-info'>
+      <block wx:for='{{imgs}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class="weui-footer">
+  <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">小黄象</navigator>
+  </view> -->
+  <view class="weui-footer__text">Boyce Lee 提供技术支持</view>
   </view>
 </view>

@@ -4,19 +4,116 @@
   background-color: #F6F8F8;
   font-family:"微软雅黑"; 
   font-size: 28rpx;
-  height:100%;
+  /* height:100%;
   position:fixed;
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
+}
+
+.shop-logo {
+  text-align: center;
+  background: #fff;
+  width: 100%;
+}
+
+.shop-logo > image {
+  height: 300rpx;
+}
+
+.shop-info {
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 20rpx 0 0 0 ;
 }
 
 .shop-addr, .shop-time, .shop-phone {
-  line-height: 80rpx;
-  padding: 0 10rpx 0 20rpx;
+  line-height: 70rpx;
+  padding: 0 10rpx 0 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.shop-info-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.shop-imgs, .shop-desc {
+  width: 100%;
+  background-color: #fff;
+}
+
+.shop-imgs {
+  margin-bottom: 200rpx;
+}
+
+.shop-imgs-text, .shop-desc-text{
+  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx 0 40rpx;
+  border-left: 3px solid #1C9C42;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.shop-desc-info {
+  font-size: 26rpx;
+  padding: 20rpx 10rpx 20rpx 10rpx;
+}
+
+.shop-imgs-img {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+.shop-img-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center; 
+  height: 200rpx;
+  margin-top: 5rpx;
+}
+
+.img-item {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shop-img {
+  width: 100%;
+  height: 100%;
 }
 
 .section {
-  margin-top: 200px;
+  margin-top: 10px;
+}
+
+
+.tapPhone {
+  background-color: #F6F8F8;
+}
+
+.imgs-info {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+.item-img {
+  width: 220rpx;
+  height: 190rpx;
+  margin-bottom: 10rpx;
 }

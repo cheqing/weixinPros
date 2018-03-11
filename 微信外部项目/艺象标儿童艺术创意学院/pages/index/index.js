@@ -8,12 +8,57 @@ Page({
       addr:'燕郊开发区富地广场E座二层艺象标儿童创艺美术中心',
       time:"09:00 -- 22:00",
       phone:"0316-5752052"
-    }
+    },
+    logo:"http://chuantu.biz/t6/247/1520391361x-1376440222.png",
+    // imgs:{
+    //   img1:[
+    //     'http://chuantu.biz/t6/247/1520391786x-1376440222.jpg',
+    //     'http://chuantu.biz/t6/247/1520392757x-1376440222.jpg',
+    //     'http://chuantu.biz/t6/247/1520393064x1822611407.jpg'
+    //   ],
+    //   img2:[
+    //     'http://chuantu.biz/t6/247/1520393241x-1376440234.jpg',
+    //     'http://chuantu.biz/t6/247/1520393428x-1376440234.jpg',
+    //     'http://chuantu.biz/t6/248/1520396133x1822611407.jpg'
+    //   ]
+    //   // img3:[
+    //   //   'http://chuantu.biz/t6/248/1520396427x-1376440222.jpg'
+    //   // ]
+    // }
+    imgs: [
+      'http://chuantu.biz/t6/247/1520391786x-1376440222.jpg',
+      'http://chuantu.biz/t6/247/1520392757x-1376440222.jpg',
+      'http://chuantu.biz/t6/247/1520393064x1822611407.jpg',
+      'http://chuantu.biz/t6/247/1520393241x-1376440234.jpg',
+      'http://chuantu.biz/t6/247/1520393428x-1376440234.jpg',
+      'http://chuantu.biz/t6/248/1520396133x1822611407.jpg'
+    ]
+  },
+  //预览图片
+  lookImg: function(e){
+    console.log(e.currentTarget.dataset.index);
+    var index = e.currentTarget.dataset.index;
+    var imgArr = this.data.imgs;
+    wx.previewImage({
+      current: imgArr[index],
+      urls: ['http://chuantu.biz/t6/247/1520391786x-1376440222.jpg',
+        'http://chuantu.biz/t6/247/1520392757x-1376440222.jpg',
+        'http://chuantu.biz/t6/247/1520393064x1822611407.jpg',
+        'http://chuantu.biz/t6/247/1520393241x-1376440234.jpg',
+        'http://chuantu.biz/t6/247/1520393428x-1376440234.jpg',
+        'http://chuantu.biz/t6/248/1520396133x1822611407.jpg'
+        ]
+    })
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  tapPhone: function(e){
+    wx.makePhoneCall({
+      phoneNumber: '0316-5752052',
     })
   },
   onLoad: function () {
