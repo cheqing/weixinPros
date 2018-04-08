@@ -1,9 +1,9 @@
 {
-  "pages": [
+  "pages":[
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window": {
+  "window":{
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFC640",
     "navigationBarTitleText": "艺象标儿童艺术创意学院",
