@@ -7,22 +7,21 @@ Page({
     toView: 'green',
     scrollTop: 100,
     scrollLeft: 0,
-    yuyuetime:'',
     info:{
       addr:'燕郊开发区富地广场E座二层艺象标儿童创艺美术中心',
       time:"09:00 -- 22:00",
       phone:"0316-5752052"
     },
-    swiperItem: [
-      "http://i1.bvimg.com/640329/a2e6dc76e33618efs.jpg",
-      "http://i1.bvimg.com/640329/68368ac87303e25es.jpg",
-      "http://i1.bvimg.com/640329/6a45c86407a47866s.jpg"
+    swiperItem:[
+      "http://i4.bvimg.com/640329/966462dab065726bt.jpg",
+      "http://i4.bvimg.com/640329/ce46b7f10d1b846bt.jpg",
+      "http://i4.bvimg.com/640329/d8b838fbb7a947bct.jpg"
     ],
     gongnengItem: [
-      { name: '学校简介', url: 'http://i1.bvimg.com/640329/6d39140d96f55d4bt.jpg' },
-      { name: '作品展示', url: 'http://i1.bvimg.com/640329/c703114f179b6696t.jpg' },
-      { name: '咨询客服', url: 'http://i1.bvimg.com/640329/41a1071e229b3d8bt.jpg' },
-      { name: '在线预约', url: 'http://i1.bvimg.com/640329/388a9e8bd8d19185t.jpg' }
+      { name: '学校简介', url: '../../imgs/xuexiaojianjie.jpg' },
+      { name: '作品展示', url: '../../imgs/zuopinzhanshi.jpg' },
+      { name: '咨询客服', url: '../../imgs/zixunkefu.jpg' },
+      { name: '在线预约', url: '../../imgs/zaixianyuyue.jpg' }
     ],
     // imgs:{
     //   img1:[
@@ -73,12 +72,6 @@ Page({
       scrollLeft: this.data.scrollLeft + 10
     })
   },
-  bindDateChange: function(e){
-    this.setData({
-      yuyuetime: e.detail.value
-    })
-  },
-
   //预览图片
   lookImg: function(e){
     console.log(e)

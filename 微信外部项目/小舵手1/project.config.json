@@ -9,9 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
-	"appid": "wx93a302a675e3ab8d",
+	"appid": "touristappid",
 	"projectname": "%E5%B0%8F%E8%88%B5%E6%89%8B",
-	"isGameTourist": false,
 	"condition": {
 		"search": {
 			"current": -1,

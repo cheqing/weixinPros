@@ -5,7 +5,7 @@
       <swiper-item>
         <!-- <block wx:for="{{item}}" wx:key='{{index}}'> -->
           <view class='swiper-item-info' style='text-align:center'>
-              <image src='{{item}}' mode='aspectFit'></image>
+              <image src='{{item}}' mode='scaleToFill'></image>
               <!-- <text>{{item.name}}</text> -->
           </view>
         <!-- </block> -->
@@ -13,66 +13,40 @@
     </block>
   </swiper>
 
-   <view class='body_nav'>
-    <block wx:for="{{gongnengItem}}" wx:key='{{index}}'>
-        <view class='swiper-item-info1'>
-            <image src='{{item.url}}' style='width:80px;height:60px;'></image>
-            <text style='margin-top:10rpx'>{{item.name}}</text>
-        </view>
-    </block>
-  </view> 
-
-  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;background-color:#fff;padding:10px;" scroll-left="{{scrollLeft}}">
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%" scroll-left="{{scrollLeft}}">
       <view class='swiper-item-info2 scroll-view-item_H'>
-        <image class='scroll_img' src='http://i1.bvimg.com/640329/c21dd7d6d1fd9a61s.jpg'></image>
+        <image class='scroll_img' src='http://i4.bvimg.com/640329/f851bd46bf07e871t.jpg'></image>
         <text class='scroll_text'>创意课</text>
       </view>
       <view class='swiper-item-info2 scroll-view-item_H'>
-          <image class='scroll_img' src='http://i1.bvimg.com/640329/68368ac87303e25es.jpg'></image>
+          <image class='scroll_img' src='http://i4.bvimg.com/640329/319c952bcf635cd1t.jpg'></image>
           <text class='scroll_text'>创意素描课</text>
       </view>
       <view class='swiper-item-info2 scroll-view-item_H'>
-          <image class='scroll_img' src='http://i1.bvimg.com/640329/4db4eb71a3732b47s.jpg'></image>
+          <image class='scroll_img' src='http://i4.bvimg.com/640329/068b134c00026a25t.jpg'></image>
           <text class='scroll_text'>动漫课</text>
       </view>
       <view class='swiper-item-info2 scroll-view-item_H'>
-          <image class='scroll_img' src='http://i1.bvimg.com/640329/6a45c86407a47866s.jpg'></image>
+          <image class='scroll_img' src='http://i4.bvimg.com/640329/2b75bfc1449e5e67t.jpg'></image>
           <text class='scroll_text'>国画课</text>
       </view>
 </scroll-view>
 
-  <view class='body_video'>
-    <image class='scroll_img' src='http://i1.bvimg.com/640329/749132c289329cc2s.jpg'></image>
-  </view>
-
-  <view class='service_center'>
-    <view class='center_text'>服务中心</view>
-    <view class='center_item'>
-      <text class='item_info item_bohao'>一键拨号</text>
-      <text class='item_info item_daohang'>一键导航</text>
-      <text class='item_info item_yuyue'>一键预约</text>
-      <text class='item_info item_zixun'>微信咨询</text>
-    </view>
-  </view>
-
-
+   <view style='display:flex; margin-top:30rpx;margin-bottom:30rpx'>
+    <block wx:for="{{gongnengItem}}" wx:key='{{index}}'>
+        <view class='swiper-item-info1'>
+            <image src='{{item.url}}' style='width:50px;height:50px;'></image>
+            <text style='margin-top:10rpx'>{{item.name}}</text>
+        </view>
+    </block>
+  </view> 
+    
   <view class='shop-imgs'>
-    <view class='shop-imgs-text'>预约</view>
-    <view class='shop-imgs-form'>
-      <text>姓名：</text>
-      <input placeholder='请输入姓名'></input>
-
-      <text>电话：</text>
-      <input placeholder='请输入电话'></input>
-
-      <text>微信：</text>
-      <input placeholder='请输入微信'></input>
-
-      <text>日期：</text>
-      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
-        <input placeholder='请输入时间' value='{{yuyuetime}}'></input>
-      </picker>
-    </view>
+    <view class='shop-imgs-text'>简介</view>
+    <text style='font-size:34rpx;display:block;padding:10px 10px'>教育部部长周济指出,我国教育中一个致命缺点就是学生创新精神和创造能力不足,造成这样结果的根源在哪里?是教师和家长忽视了对孩子创造思维的培养。
+美术活动通过创作来培养孩子独立思考和解决问题的能力,培养丰富的想象力和变通能力,对培养孩子的创造思维具有独特的优势。有很多家长和老师却以教孩子如何画线、涂色、比例、透视关系等绘画技能为主,忽视了能力的培养。小舵手美术馆为孩子提供想象、发现、挑战、构思的教学环境,培养孩子自由自主的绘画能力。
+学美术还有一重要目的,就是培养孩子的审美修养。很多老师和家长认为,审美修养是教出来的,这种观念是错误的,正确的做法是给孩子提供美的环境,如参观各种美术展。孩子美的东西看多了,眼界就高,欣赏水平自然提高。
+美术活动是孩子表达思想,宣泄情感的工具,通过它来培养创造思维,提高审美修养,这就是孩子学美术的目的。泰安风车美术学校秉承“快乐、审美、创造”的教学理念,让孩子快乐的画画,让画画成为孩子们的快乐。</text>
   </view>
 
   <!-- <view class='shop-imgs'>
