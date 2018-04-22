@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/xiaoduoshou/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC640",
+    "navigationBarTitleText": "艺象标儿童艺术创意学院",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "学校简介",
+        "iconPath": "imgs/xuexiaojianjie.jpg",
+        "selectedIconPath": "imgs/xuexiaojianjie.jpg"
+      },
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "作品展示",
+        "iconPath": "imgs/zuopinzhanshi.jpg",
+        "selectedIconPath": "imgs/zuopinzhanshi.jpg"
+      },
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "咨询客服",
+        "iconPath": "imgs/zixunkefu.jpg",
+        "selectedIconPath": "imgs/zixunkefu.jpg"
+      },
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "在线预约",
+        "iconPath": "imgs/zaixianyuyue.jpg",
+        "selectedIconPath": "imgs/zaixianyuyue.jpg"
+      }
+    ]
+  }
+}
