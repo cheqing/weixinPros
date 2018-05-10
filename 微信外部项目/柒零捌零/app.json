@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/xiaoduoshou/index",
+    "pages/baoming/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC640",
+    "navigationBarTitleText": "柒零捌零",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor":"#5E5352",
+    "color":"#FFF",
+    "list": [
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "首页",
+        "iconPath": "/imgs/time.png",
+        "selectedIconPath": "/imgs/time.png"
+      },
+      {
+        "pagePath": "pages/baoming/index",
+        "text": "培训报名",
+        "iconPath": "/imgs/time.png",
+        "selectedIconPath": "/imgs/time.png"
+      },
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "微信客服",
+        "iconPath": "/imgs/time.png",
+        "selectedIconPath": "/imgs/time.png"
+      },
+      {
+        "pagePath": "pages/xiaoduoshou/index",
+        "text": "联系我们",
+        "iconPath": "/imgs/time.png",
+        "selectedIconPath": "/imgs/time.png"
+      }
+    ]
+  }
+}

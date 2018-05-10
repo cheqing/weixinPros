@@ -1,0 +1,19 @@
+
+  <view class='shop-imgs'>
+    <view class='shop-imgs-text'>预约</view>
+    <view class='shop-imgs-form'>
+      <text>姓名：</text>
+      <input placeholder='请输入姓名'></input>
+
+      <text>电话：</text>
+      <input placeholder='请输入电话'></input>
+
+      <text>微信：</text>
+      <input placeholder='请输入微信'></input>
+
+      <text>日期：</text>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <input placeholder='请输入时间' value='{{yuyuetime}}'></input>
+      </picker>
+    </view>
+  </view>

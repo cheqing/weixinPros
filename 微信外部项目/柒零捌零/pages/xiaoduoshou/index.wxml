@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<view class="page">
+  <swiper class='swiperList' indicator-dots='true' indicator-active-color="#FFC640" interval='2000' duration='500'>
+    <block wx:for="{{swiperItem}}" wx:key='{{index}}'>
+      <swiper-item>
+        <!-- <block wx:for="{{item}}" wx:key='{{index}}'> -->
+          <view class='swiper-item-info' style='text-align:center'>
+              <image src='{{item}}' mode='scaleToFill'></image>
+              <!-- <text>{{item.name}}</text> -->
+          </view>
+        <!-- </block> -->
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='body_nav'>
+    <block wx:for="{{gongnengItem}}" wx:key='{{index}}'>
+        <view class='swiper-item-info1'>
+            <image src='{{item.url}}' style='width:80px;height:60px;'></image>
+            <text style='margin-top:10rpx;text-align:center'>{{item.name}}</text>
+        </view>
+    </block>
+  </view>
+
+   <view class='jingpintuijian'>
+    <view class='shop-imgs-text'>精品推荐</view>
+    <view class='jingpin_img'>
+      <block wx:for="{{gongnengItem}}" wx:key='{{index}}'>
+        <image src='{{item.url}}' style='margin-bottom:20px;'></image>
+      </block>
+    </view>
+  </view> 
+
+  <!-- <view class='shop-imgs'>
+    <view class='shop-imgs-text'>创意课</view>
+    <view class='imgs-info'>
+      <block wx:for='{{imgs_chuangyike}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='shop-imgs'>
+    <view class='shop-imgs-text'>创意素描课</view>
+    <view class='imgs-info'>
+      <block wx:for='{{imgs_chuangyisumiaoke}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='shop-imgs'>
+    <view class='shop-imgs-text'>动漫课</view>
+    <view class='imgs-info'>
+      <block wx:for='{{imgs_dongmanke}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='shop-imgs'>
+    <view class='shop-imgs-text'>国画课</view>
+    <view class='imgs-info'>
+      <block wx:for='{{imgs_guohuake}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='shop-imgs'>
+    <view class='shop-imgs-text'>寒假微景观课</view>
+    <view class='imgs-info'>
+      <block wx:for='{{imgs_hanjiaweijingguanke}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='shop-imgs'>
+    <view class='shop-imgs-text'>活动</view>
+    <view class='imgs-info'>
+      <block wx:for='{{imgs_huodong}}' wx:key='{{index}}'>
+        <image src='{{item}}' mode='scaleToFill' data-index='{{index}}' class='item-img' bindtap='lookImg'></image>
+      </block>
+    </view>
+  </view> -->
+
+</view>
