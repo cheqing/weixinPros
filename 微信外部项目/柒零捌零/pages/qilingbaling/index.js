@@ -37,33 +37,6 @@ Page({
     //   //   'http://chuantu.biz/t6/248/1520396427x-1376440222.jpg'
     //   // ]
     // }
-    imgs_chuangyike: [
-      'http://i4.bvimg.com/640329/966462dab065726bt.jpg',
-      'http://i4.bvimg.com/640329/f851bd46bf07e871t.jpg'
-    ],
-    imgs_chuangyisumiaoke: [
-      'http://i4.bvimg.com/640329/ce46b7f10d1b846bt.jpg',
-      'http://i4.bvimg.com/640329/319c952bcf635cd1t.jpg',
-      'http://i4.bvimg.com/640329/4db4eb71a3732b47t.jpg'
-    ],
-    imgs_dongmanke: [
-      'http://i4.bvimg.com/640329/719ea24bb9b0c744t.jpg',
-      'http://i4.bvimg.com/640329/068b134c00026a25t.jpg'
-    ],
-    imgs_guohuake: [
-      'http://i4.bvimg.com/640329/d8b838fbb7a947bct.jpg',
-      'http://i4.bvimg.com/640329/2b75bfc1449e5e67t.jpg'
-    ],
-    imgs_hanjiaweijingguanke: [
-      'http://i4.bvimg.com/640329/9db1aab4ee4d6d40t.jpg',
-      'http://i4.bvimg.com/640329/46f1975f448d324bt.jpg',
-      'http://i4.bvimg.com/640329/43e991d5cdbeacc1t.jpg'
-    ],
-    imgs_huodong: [
-      'http://i4.bvimg.com/640329/c21dd7d6d1fd9a61t.jpg',
-      'http://i4.bvimg.com/640329/6a45c86407a47866t.jpg',
-      'http://i4.bvimg.com/640329/a8d1fe97d846c6a8t.jpg'
-    ]
   },
   //通过设置滚动条位置实现画面滚动
   tapMove: function (e) {

@@ -16,4 +16,5 @@
         <input placeholder='请输入时间' value='{{yuyuetime}}'></input>
       </picker>
     </view>
+    <!-- <button type='primary'>提交</button> -->
   </view>

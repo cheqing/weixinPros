@@ -1,22 +1,27 @@
 {
   "pages": [
-    "pages/xiaoduoshou/index",
+    "pages/qilingbaling/index",
     "pages/baoming/index",
+    "pages/kafei/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/tiandian/index",
+    "pages/hongdou/index",
+    "pages/kefu/index",
+    "pages/lianxi/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFC640",
+    "navigationBarBackgroundColor": "#5E5352",
     "navigationBarTitleText": "柒零捌零",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor":"#5E5352",
-    "color":"#FFF",
+    "backgroundColor": "#5E5352",
+    "color": "#FFF",
     "list": [
       {
-        "pagePath": "pages/xiaoduoshou/index",
+        "pagePath": "pages/qilingbaling/index",
         "text": "首页",
         "iconPath": "/imgs/time.png",
         "selectedIconPath": "/imgs/time.png"
@@ -28,13 +33,13 @@
         "selectedIconPath": "/imgs/time.png"
       },
       {
-        "pagePath": "pages/xiaoduoshou/index",
+        "pagePath": "pages/kefu/index",
         "text": "微信客服",
         "iconPath": "/imgs/time.png",
         "selectedIconPath": "/imgs/time.png"
       },
       {
-        "pagePath": "pages/xiaoduoshou/index",
+        "pagePath": "pages/lianxi/index",
         "text": "联系我们",
         "iconPath": "/imgs/time.png",
         "selectedIconPath": "/imgs/time.png"

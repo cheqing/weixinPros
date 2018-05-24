@@ -1,0 +1,9 @@
+<!--pages/hongdou/index.wxml-->
+<view class='jingpintuijian'>
+  <view class='shop-imgs-text'>甜点</view>
+  <view class='jingpin_img'>
+    <block wx:for="{{imgs}}" wx:key='{{index}}'>
+      <image src='{{item}}' style='margin-bottom:20px;'></image>
+    </block>
+  </view>
+</view> 

@@ -1,0 +1,23 @@
+/* pages/kafei/index.wxss */
+
+.jingpintuijian {
+  background-color: #fff;
+}
+.shop-imgs-text, .shop-desc-text{
+  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* padding: 0 20rpx 0 40rpx; */
+  text-align: center;
+  border-left: 3px solid #1C9C42;
+  border-bottom: 1px solid #d0d0d0;
+}
+.jingpin_img {
+  display:flex; 
+  margin-top:30rpx;
+  margin-bottom:30rpx;
+  background-color:#fff;
+  padding:10px;
+  flex-direction:column;
+  align-items:center;
+}

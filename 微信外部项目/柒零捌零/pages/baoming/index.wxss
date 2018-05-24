@@ -29,3 +29,12 @@
   height: 200rpx;
   margin-top: 5rpx;
 }
+
+.shop-imgs-form {
+  padding: 20rpx;
+}
+
+input {
+  border: 1px solid #F7F7FA;
+  margin-bottom: 10rpx;
+}

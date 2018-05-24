@@ -13,13 +13,28 @@
     </block>
   </swiper>
 
-  <view class='body_nav'>
+  <!-- <view class='body_nav'>
     <block wx:for="{{gongnengItem}}" wx:key='{{index}}'>
         <view class='swiper-item-info1'>
-            <image src='{{item.url}}' style='width:80px;height:60px;'></image>
-            <text style='margin-top:10rpx;text-align:center'>{{item.name}}</text>
+          <navigator url='../kafei/index'><image src='{{item.url}}' style='width:80px;height:60px;'></image></navigator>
+          <text style='margin-top:10rpx;text-align:center'>{{item.name}}</text>
         </view>
     </block>
+  </view> -->
+
+  <view class='body_nav'>
+      <view class='swiper-item-info1'>
+        <navigator url='../kafei/index'><image src='../../imgs/kafei1.jpg' style='width:80px;height:60px;'></image></navigator>
+        <text style='margin-top:10rpx;text-align:center'>咖啡</text>
+      </view>
+      <view class='swiper-item-info1'>
+        <navigator url='../tiandian/index'><image src='../../imgs/tiandian1.jpg' style='width:80px;height:60px;'></image></navigator>
+        <text style='margin-top:10rpx;text-align:center'>甜点</text>
+      </view>
+      <view class='swiper-item-info1'>
+        <navigator url='../hongdou/index'><image src='../../imgs/hongdou2.jpg' style='width:80px;height:60px;'></image></navigator>
+        <text style='margin-top:10rpx;text-align:center'>烘豆</text>
+      </view>
   </view>
 
    <view class='jingpintuijian'>

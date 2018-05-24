@@ -219,14 +219,6 @@
   margin-bottom:20rpx;
 }
 
-.shop-imgs-form {
-  padding: 20rpx;
-}
-
-input {
-  border: 1px solid #F7F7FA;
-  margin-bottom: 10rpx;
-}
 
 .bc_red {
   background-color: red;
