@@ -1,5 +1,5 @@
 
-  <view class='shop-imgs'>
+  <!-- <view class='shop-imgs'>
     <view class='shop-imgs-text'>预约</view>
     <view class='shop-imgs-form'>
       <text>姓名：</text>
@@ -16,5 +16,4 @@
         <input placeholder='请输入时间' value='{{yuyuetime}}'></input>
       </picker>
     </view>
-    <!-- <button type='primary'>提交</button> -->
-  </view>
+  </view> -->

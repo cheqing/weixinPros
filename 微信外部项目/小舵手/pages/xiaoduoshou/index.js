@@ -14,15 +14,15 @@ Page({
       phone:"0316-5752052"
     },
     swiperItem: [
-      "http://i1.bvimg.com/640329/a2e6dc76e33618efs.jpg",
-      "http://i1.bvimg.com/640329/68368ac87303e25es.jpg",
-      "http://i1.bvimg.com/640329/6a45c86407a47866s.jpg"
+      "../../imgs/huodong1.jpg",
+      "../../imgs/huodong2.jpg",
+      "../../imgs/yishuyouxue2.jpg"
     ],
     gongnengItem: [
-      { name: '学校简介', url: 'http://i1.bvimg.com/640329/6d39140d96f55d4bt.jpg' },
-      { name: '作品展示', url: 'http://i1.bvimg.com/640329/c703114f179b6696t.jpg' },
-      { name: '咨询客服', url: 'http://i1.bvimg.com/640329/41a1071e229b3d8bt.jpg' },
-      { name: '在线预约', url: 'http://i1.bvimg.com/640329/388a9e8bd8d19185t.jpg' }
+      { name: '学校简介', url: '../../imgs/766215666795701166.jpg' },
+      { name: '作品展示', url: '../../imgs/452398223014000964.jpg' },
+      { name: '咨询客服', url: '../../imgs/897972531577651277.jpg' },
+      { name: '在线预约', url: '../../imgs/399741587898243326.jpg' }
     ],
     // imgs:{
     //   img1:[

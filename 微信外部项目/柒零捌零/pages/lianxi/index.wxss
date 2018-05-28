@@ -1,1 +1,13 @@
 /* pages/lianxi/index.wxss */
+
+.clickToTel {
+  font-size:40rpx;
+  color:green;
+  text-align:center;
+  border:1px solid grey;
+  border-radius:25rpx;
+  width:80%;
+  margin:100rpx auto;
+  box-shadow:1px 1px 1px 1px grey;
+
+}

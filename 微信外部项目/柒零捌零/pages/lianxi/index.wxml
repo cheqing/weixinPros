@@ -1,2 +1,2 @@
 <!--pages/lianxi/index.wxml-->
-
+<view class='clickToTel' catchtap='clickToTel'>点我 点我，我们电话沟通哦</view>
