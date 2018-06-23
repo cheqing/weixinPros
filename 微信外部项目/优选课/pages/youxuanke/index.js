@@ -14,8 +14,8 @@ Page({
       phone:"0316-5752052"
     },
     swiperItem: [
-      "http://i1.bvimg.com/640329/a2e6dc76e33618efs.jpg",
-      "http://i1.bvimg.com/640329/68368ac87303e25es.jpg",
+      "http://i4.bvimg.com/640329/1839e427421dae77s.jpg",
+      "http://i4.bvimg.com/640329/16e719405cfd19fes.jpg",
       "http://i1.bvimg.com/640329/6a45c86407a47866s.jpg"
     ],
     gongnengItem: [
