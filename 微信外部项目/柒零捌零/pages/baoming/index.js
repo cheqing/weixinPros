@@ -21,12 +21,34 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    wx.showModal({
-      title: '提示',
-      content: '功能暂未开放，敬请期待！',
-      showCancel: false,
+
+  // 培训报名时间修改事件
+  bindDateChange: function(e){
+    this.setData({yuyuetime: e.detail.value});
+  },
+
+  // 培训报名提交事件
+  formSubmit: function(e){
+    console.log(e.detail.value);
+    wx.request({
+      url: 'http://bxkhj6.natappfree.cc/hello',
+      // data:e.detail.value,
+      data: e.detail.value,
+      method: 'POST', 
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function(res){
+        console.log('响应的数据是：'+res.data);
+      }
     })
+  },
+  onLoad: function () {
+    // wx.showModal({
+    //   title: '提示',
+    //   content: '功能暂未开放，敬请期待！',
+    //   showCancel: false,
+    // })
     // if (app.globalData.userInfo) {
     //   this.setData({
     //     userInfo: app.globalData.userInfo,
